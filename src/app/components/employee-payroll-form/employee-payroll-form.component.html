@@ -1,0 +1,67 @@
+<div class="container">
+  <h2>Employee Payroll Form</h2>
+  <form [formGroup]="payrollForm" (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" class="form-control" placeholder="Enter name" required>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="form-group">
+      <label for="profileImage">Profile Image</label>
+      <input id="profileImage" formControlName="profileImage" type="file" class="form-control">
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" formControlName="gender" class="form-control">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <!-- Department -->
+    <div class="form-group">
+      <label for="department">Department</label>
+      <select id="department" formControlName="department" class="form-control">
+        <option value="hr">HR</option>
+        <option value="sales">Sales</option>
+        <option value="finance">Finance</option>
+        <option value="engineers">Engineers</option>
+        <option value="others">Others</option>
+      </select>
+    </div>
+
+    <!-- Salary -->
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <select id="salary" formControlName="salary" class="form-control">
+        <option value="50000">50,000</option>
+        <option value="60000">60,000</option>
+        <option value="70000">70,000</option>
+        <option value="80000">80,000</option>
+        <option value="90000">90,000</option>
+      </select>
+    </div>
+
+    <!-- Start Date -->
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input id="startDate" formControlName="startDate" type="date" class="form-control">
+    </div>
+
+    <!-- Notes -->
+    <div class="form-group">
+      <label for="notes">Notes (Feedback)</label>
+      <textarea id="notes" formControlName="notes" class="form-control" placeholder="Enter feedback or notes"></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-group">
+      <button type="submit" [disabled]="!payrollForm.valid" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </div>
+  </form>
+</div>
