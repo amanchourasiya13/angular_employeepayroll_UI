@@ -1,0 +1,19 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

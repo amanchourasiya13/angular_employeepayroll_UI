@@ -1,0 +1,79 @@
+<!-- <div class="container">
+  <h2>Employee Details</h2>
+ 
+  <button [routerLink]="['/add-employee']" class="add-user-btn">+ Add User</button>
+  
+ 
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Start Date</th>
+        <th>Notes</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>
+          <img *ngIf="emp.profileImage" [src]="emp.profileImage" alt="Profile Image" class="profile-img">
+        </td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>{{ emp.department }}</td>
+        <td>{{ emp.salary | currency }}</td>
+        <td>{{ emp.startDate | date:'shortDate' }}</td>
+        <td>{{ emp.notes }}</td>
+        <td>
+          <button class="edit-btn" (click)="editEmployee(emp)">✎</button>
+          <button class="delete-btn" (click)="deleteEmployee(emp)">🗑</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+ -->
+
+
+ <div class="container">
+  <h2>Employee Details</h2>
+  <button class="btn btn-primary" (click)="navigateToAddEmployee()">+ Add User</button>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Start Date</th>
+        <th>Notes</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>
+          <img *ngIf="emp.profileImage" [src]="emp.profileImage" alt="Profile" width="50" height="50">
+        </td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>{{ emp.department }}</td>
+        <td>{{ emp.salary | currency }}</td>
+        <td>{{ emp.startDate | date:'shortDate' }}</td>
+        <td>{{ emp.notes }}</td>
+        <td>
+          <button class="btn btn-warning" (click)="editEmployee(emp)">✎</button>
+          <button class="btn btn-danger" (click)="deleteEmployee(emp)">🗑</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
